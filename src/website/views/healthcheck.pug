@@ -1,0 +1,16 @@
+html
+  title Health Check
+  style 
+    include style.css
+  body.atv-background
+    p.atv-title Health Check
+    table.atv-table
+      tr.atv-table-title
+        th.atv-table-title Uptime
+        th.atv-table-title Status
+        th.atv-table-title Time
+      each check in healthcheck
+        tr.atv-table-title
+          th.atv-table-item #{check.uptime}
+          th.atv-table-item #{check.message}
+          th.atv-table-item #{check.timestamp}
